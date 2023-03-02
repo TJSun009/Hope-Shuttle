@@ -1,0 +1,11 @@
+{
+  "agencies": [
+    {
+      "agency_key": "HOPE",
+      "path": "~/App/public/GTFS/gtfs.zip"
+    }
+  ],
+	"beautify": false,
+	"outputFormat": "csv",
+	"daysShortStrings": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+}

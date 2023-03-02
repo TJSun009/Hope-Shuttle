@@ -1,0 +1,19 @@
+{
+  "name": "shuttlebusapp",
+  "version": "1.0.0",
+  "description": "A web app for tracking Hope shuttle buses",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ore Emmanuel",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "gtfs-realtime-bindings": "^0.0.6",
+    "gtfs-to-geojson": "^3.2.0",
+    "gtfs-to-html": "^2.4.3",
+    "node-fetch": "^3.3.0",
+    "request": "^2.88.2"
+  }
+}

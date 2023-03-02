@@ -1,0 +1,9 @@
+Create basic app that uses direction service
+
+https://developers.google.com/maps/documentation/javascript/directions
+
+Check if direction has been reached.
+
+Use position, speed and checkpointing to estimate how long the bus will be. 
+
+Ignore timetable or display statically.

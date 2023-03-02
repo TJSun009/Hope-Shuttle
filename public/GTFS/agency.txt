@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang
+ORE_EMMANUEL,"Ore Emmanuel","https://replit.com/@tjSun009/App#GTFS/agency.txt",Europe/London,eng

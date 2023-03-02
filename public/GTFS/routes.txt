@@ -1,0 +1,2 @@
+route_id,route_long_name,route_desc,route_type,route_url
+1,Hope Shuttle,"The shuttle bus stops at the bus stops on Taggart Avenue outside on the EDEN Building side of the campus facing towards Woolton Road. If you are travelling from Aigburth Park, for journeys to Hope Park please use the Churrasco Steak House bus stop, and for journeys to Creative Campus please use the Tesco bus stop.",3,https://www.hope.ac.uk/informationfornewstudents/shuttlebus/
