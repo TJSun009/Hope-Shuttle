@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import CONSTANTS from "./CONSTANTS";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Map from './components/Map/Map'
+
+import {Container, Row, Col} from 'react-bootstrap';
+
+const apiKey = "AIzaSyDzolQZChZcvGbD1cl2rdm1lll0v_QBcL4";
+// console.log(apiKey, process.env['MAPS_API_KEY']);
+
+// const Layout = 
+
+const App = () => {
+	return (
+		<Container>
+			<Row>
+				<Col>Hello World</Col>
+				<Col>
+					<Map apiKey={apiKey} campuses={CONSTANTS.campuses} zoom={4}/>
+				</Col>
+			</Row>
+		</Container>
+	);
 }
 
 export default App;

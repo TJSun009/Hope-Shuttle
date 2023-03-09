@@ -1,6 +1,0 @@
-stop_id,stop_name,stop_lat,stop_lon,location_type
-merdjmtd, Irene Road, 53.39150487300515, -2.893200093679288, 0
-merdjmta, Irene Road, 53.39182000069252, -2.8928299478489548, 0
-merdawpm, Thirlstane Street (Stop D), 53.3784346625373, -2.9479164936814213, 0
-merdawpw, Lark Lane (Stop E), 53.37876066247936, -2.947896009672145, 0
-merdgwtj, College Street South, 53.412875525754934, -2.9682945317299154, 0

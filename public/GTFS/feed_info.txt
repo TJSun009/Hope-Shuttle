@@ -1,2 +1,0 @@
-feed_publisher_name,feed_publisher_url,feed_lang
-ORE_EMMANUEL,https://replit.com/@tjSun009/App#GTFS/agency.txt,eng
