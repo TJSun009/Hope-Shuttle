@@ -1,10 +1,11 @@
 const express = require("express");
-const path = require("path");
+const cors = require("cors");
+
 const app = express();
 
-const https = require('https');
+app.use(cors());
 
-const PORT = 3000;
+const PORT = 3001;
 
 app.post("/position-update", (req, res) => {
 	let data = req.body;
@@ -14,5 +15,4 @@ app.post("/position-update", (req, res) => {
 
 app.listen(PORT, () => {
 	console.log(`Server listening on http://localhost:${PORT}`);
-	getGTFSFeed();
 })

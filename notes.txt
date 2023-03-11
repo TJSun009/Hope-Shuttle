@@ -1,5 +1,5 @@
 Create basic app that uses direction service
-
+--------------------------------------------
 https://developers.google.com/maps/documentation/javascript/directions
 
 Check if direction has been reached.
@@ -9,4 +9,17 @@ Use position, speed and checkpointing to estimate how long the bus will be.
 Ignore timetable or display statically.
 
 pdf to csv conversion
+---------------------
 https://developers.zamzar.com/docs
+
+get schedule rom html tables
+----------------------------
+https://www.scraperapi.com/blog/scrape-html-table-to-csv/
+
+grab lists and match on (Full Service) vs 
+
+tables on website:
+------------------
+https://www.hope.ac.uk/informationfornewstudents/shuttlebus/
+
+// figure out using directions api alongside

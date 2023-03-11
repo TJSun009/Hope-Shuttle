@@ -2,20 +2,34 @@
   "name": "hopeshuttle",
   "version": "1.0.0",
   "description": "A web app for tracking Hope shuttle buses",
-  "scripts": {
-    "start": "npm start [command] --prefix ./app",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Ore Emmanuel",
   "license": "MIT",
+  "scripts": {
+    "start": "concurrently \"npm start [command] --prefix ./api\" \"npm start [command] --prefix ./app\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
+    "@googlemaps/react-wrapper": "^1.1.35",
     "bootstrap": "^5.2.3",
+    "concurrently": "^7.6.0",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
-    "gtfs-realtime-bindings": "^0.0.6",
-    "gtfs-to-geojson": "^3.2.0",
-    "gtfs-to-html": "^2.4.3",
-    "node-fetch": "^3.3.0",
+    "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
-    "request": "^2.88.2"
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/google.maps": "^3.52.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.14",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "react-app-rewired": "^2.2.1"
   }
 }
