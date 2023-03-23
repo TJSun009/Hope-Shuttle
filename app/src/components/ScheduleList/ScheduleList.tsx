@@ -16,7 +16,7 @@ const ScheduleList = (props: ScheduleListProps) => {
 						key={index}
 						className="d-inline-flex justify-content-between align-items-start"
 						active={active}>
-						<ScheduleItem stop={stop} scheduled={scheduled} expected={expected} />
+						<ScheduleItem stop={stop} scheduled={scheduled} expected={expected} active={active}/>
 					</ListGroup.Item>
 				)
 			}

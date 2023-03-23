@@ -18,8 +18,8 @@ const ScheduleItem = (props: ScheduleProps) => {
 			<Row className={"align-items-center"}>
 				<Col as={"h4"}>{stop}</Col>
 				<Col xs={3}>
-					<Row as={"p"}>Expected</Row>
-					<Row className={active ? "text-primary" : ''} as={"h1"}>{expected.toLocaleTimeString().slice(0, -3)}</Row>
+					<Row as={"p"}>Scheduled</Row>
+					<Row className={active === true ? '' : "text-primary"} as={"h1"}>{expected.toLocaleTimeString().slice(0, -6)}</Row>
 				</Col>
 				<Col>
 					<Badge bg={delayed}>{delay > 0 ? '+' + delay : '' + delay} mins delayed</Badge>

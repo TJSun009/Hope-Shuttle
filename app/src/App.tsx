@@ -1,6 +1,8 @@
 import './App.css';
 
-import { useState, useEffect } from "react";
+import axios from "axios"
+import { useState, useEffect} from "react";
+import { useInterval } from 'usehooks-ts'
 
 import CONSTANTS from "./CONSTANTS";
 import Map from './components/Map/Map';
@@ -41,9 +43,12 @@ const getRecentPickups = (stop: string) => {
 	return pickups;
 }
 
+const pollBusLocation = () => axios.get("/position-update")
+
 const App = () => {
 
 	const [userLocation, setUserLocation] = useState<google.maps.LatLngLiteral>();
+	const [busLocation, setBusLocation] = useState<google.maps.LatLngLiteral>();
 
 	const list = [
 		{ "stop": "Aigburth", "scheduled": new Date("2022-01-01T08:15:00.000Z"), "expected": new Date("2022-01-01T08:10:00.000Z") },
@@ -51,12 +56,22 @@ const App = () => {
 		{ "stop": "Aigburth", "scheduled": new Date("2022-01-01T13:15:00.000Z"), "expected": new Date("2022-01-01T13:10:00.000Z") }
 	]
 
+	useInterval(() => {
+		axios.get("/position-update")
+		.then(({data}: any) => {
+			const {location} = data
+			setBusLocation({"lat": location.latitude, "lng": location.longitude})
+		})
+	}, 2000)
+
 	useEffect(() => {
 		console.log(userLocation);
 		if (userLocation) {
 			console.log(getClosestStop(userLocation));
 		}
 	}, [userLocation])
+
+	const options = {setUserLocation, busLocation}
 
 	return (
 		<div >
@@ -85,7 +100,7 @@ const App = () => {
 						</Card>
 					</Col>
 					<Col sm>
-						<Map apiKey={apiKey} campuses={CONSTANTS.campuses} zoom={4} setUserLocation={setUserLocation} />
+						<Map apiKey={apiKey} campuses={CONSTANTS.campuses} zoom={4} options={options} />
 					</Col>
 				</Row>
 			</Container>

@@ -23,3 +23,5 @@ tables on website:
 https://www.hope.ac.uk/informationfornewstudents/shuttlebus/
 
 // figure out using directions api alongside
+
+// use Etag on scraping site
