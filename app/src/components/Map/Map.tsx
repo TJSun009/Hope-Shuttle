@@ -74,11 +74,11 @@ const Map = ({ campuses, zoom, options }: MapProps) => {
 	
 	useEffect(() => {
 		if (ref.current != null) {
+			
 			if (busLocation){
-				busMarker?.setMap(null);
-
-				setBusMarker(null);
 				
+				busMarker?.setMap(null);
+	
 				setBusMarker(new google.maps.Marker({
 					position: busLocation,
 					title: "Bus",
@@ -88,10 +88,9 @@ const Map = ({ campuses, zoom, options }: MapProps) => {
 						strokeColor: "red",
 						strokeWeight: 8,
 						strokeOpacity: 0.75,
-					}
+					},
+					map: map
 				}));
-				
-				busMarker?.setMap(map);
 			}
 		}
 	}, [busLocation])
